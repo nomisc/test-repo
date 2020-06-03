@@ -1,5 +1,11 @@
 {
     "name": "nomisc/test-repo",
     "type": "standard",
-    "description": "Standard for PHP package skeletons."
+    "description": "Standard for PHP package skeletons.",
+
+    "autoload": {
+        "psr-4": {
+            "NomisC\\Test\\": "src/"
+        }
+    }
 }
