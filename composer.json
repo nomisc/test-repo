@@ -1,5 +1,5 @@
 {
-    "name": "nomisc/test",
+    "name": "nomisc/test-repo",
     "type": "standard",
     "description": "Standard for PHP package skeletons."
 }
