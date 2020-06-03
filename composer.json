@@ -1,0 +1,5 @@
+{
+    "name": "nomisc/test",
+    "type": "standard",
+    "description": "Standard for PHP package skeletons."
+}
