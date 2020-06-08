@@ -1,0 +1,19 @@
+{
+  "_jwtAccessTokenName" : "_pirnarJwtAcc",
+
+  "_jwtRefreshTokenName":"_pirnarJwtRfr",
+
+  "_authServer":"https://auth-dev.pirnar.io/",
+
+  "_validateRequest":"/validate",
+
+  "_refreshRequest":"/token",
+
+  "_cookieDomain":".pirnar.local",
+
+  "_accessTokenTime":"300",
+
+  "_refreshTokenTime":"3600",
+
+  "_loginServer":"http://login.pirnar.local/"
+}
