@@ -46,9 +46,9 @@ class JwtValidate
             $this->_refreshRequest = $this->config->_refreshRequest;
             $this->_authServer = $this->config->_authServer;
 
-            $this->_jwtAccessToken = $_COOKIE[$this->_accessTokenName];
+            $this->_jwtAccessToken =(isset( $_COOKIE[$this->_accessTokenName]) ? $_COOKIE[$this->_accessTokenName] : false) ;
+            $this->_jwtRefreshToken =(isset( $_COOKIE[$this->_refreshTokenName]) ?  $_COOKIE[$this->_refreshTokenName] : false) ;
 
-            $this->_jwtRefreshToken = $_COOKIE[$this->_refreshTokenName];
         }
 
     private function Config() {
