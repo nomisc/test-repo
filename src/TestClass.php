@@ -1,5 +1,5 @@
 <?php
-namespace NomisC\ProgramABC;
+namespace NomisC\prog;
 
 class TestClass
 {

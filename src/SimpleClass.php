@@ -1,7 +1,7 @@
 <?php
 
 
-namespace NomisC\ProgramNekaj;
+namespace NomisC\prog;
 
 
 class SimpleClass
