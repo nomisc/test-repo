@@ -10,4 +10,8 @@ class TestClass
     public function NewWord() {
         echo 'this is new function';
     }
+
+    public function output($input) {
+        echo "<br><b>".$input."<b><br>";
+    }
 }
