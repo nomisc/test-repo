@@ -97,6 +97,14 @@ class JwtValidate
         setcookie($this->_refreshTokenName,$this->_jwtRefreshToken,time()+$this->_refreshTokenTime,"/",$this->_cookieDomain,false,true);
     }
 
+    private function UnsetAccessTokenCookie() {
+        setcookie($this->_accessTokenName,$this->_jwtAccessToken,time()-3600,"/",$this->_cookieDomain,false,true);
+    }
+
+    private function UnsetRefreshTokenCookie() {
+        setcookie($this->_refreshTokenName,$this->_jwtRefreshToken,time()-3600,"/",$this->_cookieDomain,false,true);
+    }
+
     public function TokenValidation($redirect = true) {
         $responseAccess = json_decode($this->CurlCall($this->_jwtAccessToken,$this->_validateRequest));
         if ($responseAccess->StatusCode !== 200) {
@@ -128,5 +136,11 @@ class JwtValidate
         $class = new JwtValidate();
         $class->TokenValidation();
         return $class->GetStatus();
+    }
+
+    public static function Logout() {
+        $class = new JwtValidate();
+        $class->UnsetAccessTokenCookie();
+        $class->UnsetRefreshTokenCookie();
     }
 }
